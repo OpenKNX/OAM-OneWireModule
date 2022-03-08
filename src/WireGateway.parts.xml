@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<KNX xmlns:mc="http://github.com/mumpf/multiply-channels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knx.org/xml/project/14 ../../../knx.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CreatedBy="KNX MT" ToolVersion="5.1.255.16695" xmlns="http://knx.org/xml/project/14">
+  <ManufacturerData>
+    <Manufacturer RefId="M-00FA">
+      <ApplicationPrograms>
+        <ApplicationProgram Id="M-00FA_A-0001-01-0000" ApplicationNumber="103" ApplicationVersion="10" ProgramType="ApplicationProgram" MaskVersion="MV-07B0" Name="WP-Sensor-Logic" LoadProcedureStyle="MergedProcedure" PeiType="0" DefaultLanguage="de" DynamicTableManagement="false" Linkable="true" MinEtsVersion="4.0">
+          <Dynamic>
+            <ChannelIndependentBlock>
+              <ParameterBlock Id="M-00FA_A-0001-01-0000_PB-2" Name="Hardware" Text="WireGateway: Hardware (vorbelegt)">
+                <!-- Maximum number of Busmaster (used as Parameter for WireGateway and Sensormodul) -->
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_P-529_R-5291" />
+                <!-- buzzer available (invisible, false) -->
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-5_R-52" />
+                <!-- rgb led available (invisible, false) -->
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-6_R-62" />
+                <!-- eeprom available (invisible, true) -->
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-7_R-71" />
+                <choose ParamRefId="M-00FA_A-0001-01-0000_UP-7_R-71">
+                  <when test="0">
+                    <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-11" Text="Ohne EEPROM kann das Logikmodul Werte der Eingänge nicht speichern und nach einem Neustart wieder zur Verfügung stellen. Diese Funktion wird in der Applikation nicht angeboten." UIHint="Information" />
+                  </when>
+                </choose>
+                <!-- ncn5130 available (invisible, true) -->
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-8_R-81" />
+                <choose ParamRefId="M-00FA_A-0001-01-0000_UP-8_R-81">
+                  <when test="0">
+                    <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-12" Text="Ohne Abschaltmöglichkeit der Zusatzhardware (RGB-LED, Buzzer) kann das Logikmodul Werte der Eingänge nicht speichern und nach einem Neustart wieder zur Verfügung stellen. Diese Funktion wird in der Applikation nicht angeboten." UIHint="Information" />
+                  </when>
+                </choose>
+                <ComObjectRefRef RefId="M-00FA_A-0001-01-0000_O-2_R-21" />
+                <ComObjectRefRef RefId="M-00FA_A-0001-01-0000_O-3_R-31" />
+                <choose ParamRefId="M-00FA_A-0001-01-0000_P-3_R-31">
+                  <when test="!=0">
+                    <!-- show heartbeat only if it is parametrized -->
+                    <ComObjectRefRef RefId="M-00FA_A-0001-01-0000_O-1_R-11" />
+                  </when>
+                </choose>
+                <!-- move locally set values to global parameters -->
+                <!-- this is used for decoupling specific applications from global behaviour -->
+                <Assign TargetParamRefRef="M-00FA_A-0001-01-0000_UP-5_R-51" SourceParamRefRef="M-00FA_A-0001-01-0000_UP-5_R-52"/>
+                <Assign TargetParamRefRef="M-00FA_A-0001-01-0000_UP-6_R-61" SourceParamRefRef="M-00FA_A-0001-01-0000_UP-6_R-62"/>
+                <Assign TargetParamRefRef="M-00FA_A-0001-01-0000_UP-7_R-71" SourceParamRefRef="M-00FA_A-0001-01-0000_UP-7_R-72"/>
+              </ParameterBlock>
+              <ParameterBlock Id="M-00FA_A-0001-01-0000_PB-3" Name="Expert" Text="Experten-Einstellungen">
+                <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="Die Einstellungen dieser Seite sind nur für Experten, die sich genau mit 1-Wire-Bus-Timing auskennen. Das Datenblatt vom DS2484, Seite 13 ist heranzuziehen." UIHint="Information" />
+                <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="Falls sich duch Anpassungen hier das Modul nicht mehr über die ETS programmieren lässt, bitte erneut die Firmware per USB aufspielen und dann mit Standardparametern neu programmieren." />
+                <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-530_R-5301" />
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-531_R-5311" />
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-532_R-5321" />
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-533_R-5331" />
+                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-534_R-5341" />
+              </ParameterBlock>
+            </ChannelIndependentBlock>
+          </Dynamic>
+        </ApplicationProgram>
+      </ApplicationPrograms>
+    </Manufacturer>
+  </ManufacturerData>
+</KNX>

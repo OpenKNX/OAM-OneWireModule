@@ -1,0 +1,78 @@
+We have 8 groups, each group is of type OR (0) or AND (1) group as bitmask i.e. 01000101
+Each iButton belongs to any of these groups as bitmask i.e. 11000111
+Each iButton is present (1) or absent (0)
+Each group-KO is currently on (1) or off (0)
+
+We start an iteration over all iButtons with some bitmasks:
+ToProcess:      11111111
+GroupType:      01000101
+
+iteration 1:
+iButton is 1
+iButtonGroups:  11000111
+& ToProcess:    11111111
+=iButtonGroups: 11000111
+groupinteration 0:
+                11000111
+                       ^ ibutton belongs to this group and must be processed
+                         ibutton is 1 and it is an AND group => do nothing
+groupinteration 1:
+                11000111
+                      ^  ibutton belongs to this group and must be processed
+                         ibutton is 1 and it is an OR group => Set group-KO to 1 if not already the case
+                11111101 ToProcess clears this bit as processed
+groupinteration 2:
+                11000111
+                     ^   ibutton belongs to this group and must be processed
+                         ibutton is 1 and it is an AND group => do nothing
+groupinteration 3:
+                11000111
+                    ^    ibutton does not belong to this group => not processing
+groupinteration 4:
+                11000111
+                   ^     ibutton does not belong to this group => not processing
+groupinteration 5:
+                11000111
+                  ^      ibutton does not belong to this group => not processing
+groupinteration 6:
+                11000111
+                 ^       ibutton belongs to this group and must be processed
+                         ibutton is 1 and it is an AND group => do nothing
+groupinteration 7:
+                11000111
+                ^        ibutton belongs to this group and must be processed
+                         ibutton is 1 and it is an OR group => Set group-KO to 1 if not already the case
+                01111101 ToProcess clears this bit as processed
+
+iteration 2:
+iButton is 0:
+iButtonGroups:  10100011
+& ToProcess:    01111101
+=iButtonGroups: 00100001
+groupinteration 0:
+                00100001
+                       ^ ibutton belongs to this group and must be processed
+                         ibutton is 0 and it is an AND group => Set group-KO to 0 if not already the case
+                01111100 ToProcess clears this bit as processed
+groupinteration 5:
+                00100001
+                  ^      ibutton belongs to this group and must be processed
+                         ibutton is 0 and it is an OR group => do nothing
+
+iButton iterations are over
+Final iteration on all groups over ToProcess:
+groupinteration 0:
+                01111100 
+                       ^ group was processed, do nothing
+groupinteration 1:
+                01111100 
+                      ^  group was processed, do nothing
+groupinteration 2:
+                01111100 
+                     ^   group is unprocessed, we check groups type
+                01000101 is AND group => set group KO to 1 if not already the case
+groupinteration 3:
+                01111100 
+                    ^    group is unprocessed, we check groups type
+                01000101 is OR group => set group KO to 0 if not already the case
+

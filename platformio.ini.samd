@@ -1,0 +1,84 @@
+;PlatformIO Project Configuration File
+;
+;   Build options: build flags, source filter
+;   Upload options: custom upload port, speed and extra flags
+;   Library options: dependencies, extra library storages
+;   Advanced options: extra scripting
+;
+; Please visit documentation for the other options and examples
+; https://docs.platformio.org/page/projectconf.html
+
+[platformio]
+default_envs = build
+libdeps_dir = /tmp/libdeps
+
+[env]
+platform = atmelsam
+board = zeroUSB
+; board = adafruit_itsybitsy_m0
+framework = arduino
+;build_type = debug
+build_flags = 
+  -DDEBUG_DELAY=10000
+  ; select correct hardware to compile for
+  ; the following 2 lines are for board=zeroUSB
+  -D BOARD_MASIFI_ONEWIRE
+  -D SERIAL_DEBUG=SerialUSB
+  ; the following 2 lines are for board=adafruit_itsybitsy_m0
+  ; -D SERIAL_DEBUG=Serial
+  ; -D BOARD_MASIFI_ONEWIRE_ITSYBITSY_M0
+  ; optimize knx stack
+  -D SMALL_GROUPOBJECT
+  -D WATCHDOG
+  ; use correct generated header file logic
+  -D WIREGATEWAY
+  -D MASK_VERSION=0x07B0
+  -D KNX_FLASH_SIZE=0x4000
+  -Wno-unknown-pragmas 
+  -Wno-switch
+  -Wno-write-strings
+  -Wno-format-overflow
+  ; trace logic execution in logicmodule
+  ;-D LOGIC_TRACE
+  ; debug timing in knx stack
+  ;-D DEBUG_TIMING
+  ; debug timing in 1-Wire-Search
+  ;-D DebugInfoBM
+  ;-D DebugInfoSearch
+  ; watchdog support, deactivate for debugging
+monitor_speed = 115200
+lib_ldf_mode = deep+
+lib_extra_dirs = 
+  ..
+; lib_deps = 
+;   SPI
+;   Wire
+
+debug_tool = jlink
+; debug_tool = atmel-ice
+[env:build]
+upload_protocol = sam-ba
+[env:debug]
+build_type = debug
+; debug_build_flags = 
+;   -Og 
+;   -ggdb2 
+;   -g2
+; debug_build_flags = -O0 -ggdb3 -g3
+; debug_init_cmds =
+;   target extended-remote $DEBUG_PORT
+;   $INIT_BREAK
+;   ; monitor reset 0
+;   $LOAD_CMDS
+;   ; monitor init
+;   monitor reset 0
+debug_extra_cmds = 
+  set output-radix 16
+
+[env:uploadUSB]
+upload_protocol = sam-ba
+[env:uploadJLINK]
+upload_protocol = jlink
+[env:uploadATMEL]
+upload_protocol = atmel-ice
+
