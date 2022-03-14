@@ -67,7 +67,7 @@ void WireDevice::processReadRequests()
 void WireDevice::processKOCallback(GroupObject &iKo)
 {
     // check for 1-Wire-KO
-    if (iKo.asap() >= WIRE_KoOffset && iKo.asap() < ((knx.paramByte(LOG_BusMasterCount) & LOG_BusMasterCountMask) >> LOG_BusMasterCountShift) * 30 + WIRE_KoOffset)
+    if (iKo.asap() >= WIRE_KoOffset && iKo.asap() < ((knx.paramByte(WIRE_BusMasterCount) & WIRE_BusMasterCountMask) >> WIRE_BusMasterCountShift) * 30 + WIRE_KoOffset)
     {
         uint8_t lDeviceIndex = iKo.asap() - WIRE_KoOffset;
         // has to be an input KO (for an 1W output device)
@@ -98,7 +98,7 @@ void WireDevice::processIButtonGroups()
     static uint8_t sIndex = 0;
     static bool sIButtonExist = true;
     static uint8_t sToProcess = 0xFF;
-    static uint8_t sGroupType = knx.paramByte(LOG_Group1); // this is constant for the whole program runtime
+    static uint8_t sGroupType = knx.paramByte(WIRE_Group1); // this is constant for the whole program runtime
     WireDevice *lDevice;
 
     // we iterate only if there are iButtons
@@ -134,10 +134,10 @@ void WireDevice::processIButtonGroups()
                     // - group type is AND and value is 0 or
                     // - group type is OR and value is 1
                     // we set the group KO to value...
-                    GroupObject &lKo = knx.getGroupObject(LOG_KoGroup1 + lGroupIndex);
+                    GroupObject &lKo = knx.getGroupObject(WIRE_KoGroup1 + lGroupIndex);
                     if ((bool)lKo.value(getDPT(VAL_DPT_1)) != lValue)
                     {
-                        printDebug("KO%d sendet Wert: %d\n", LOG_KoGroup1 + lGroupIndex, lValue);
+                        printDebug("KO%d sendet Wert: %d\n", WIRE_KoGroup1 + lGroupIndex, lValue);
                         lKo.value(lValue, getDPT(VAL_DPT_1));
                     }
                     // and mark this group as processed
@@ -157,11 +157,11 @@ void WireDevice::processIButtonGroups()
             if (sToProcess & lGroupBit)
             {
                 // group was not processed, we set KO to group type
-                GroupObject &lKo = knx.getGroupObject(LOG_KoGroup1 + lGroupIndex);
+                GroupObject &lKo = knx.getGroupObject(WIRE_KoGroup1 + lGroupIndex);
                 bool lValue = (sGroupType & lGroupBit);
                 if ((bool)lKo.value(getDPT(VAL_DPT_1)) != lValue)
                 {
-                    printDebug("KO%d sendet Wert: %d\n", LOG_KoGroup1 + lGroupIndex, lValue);
+                    printDebug("KO%d sendet Wert: %d\n", WIRE_KoGroup1 + lGroupIndex, lValue);
                     lKo.value(lValue, getDPT(VAL_DPT_1));
                 }
             }
@@ -188,12 +188,12 @@ void WireDevice::processUnknownDevices()
             if (lSensor->Mode() == OneWire::New)
             {
                 // output is 1 new ID in 2 Seconds at max
-                printDebug("KO%d sendet Wert: ", LOG_KoNewId);
+                printDebug("KO%d sendet Wert: ", WIRE_KoNewId);
                 char lBuffer[15];
                 lBuffer[14] = 0;
                 sprintf(lBuffer, "%02X%02X%02X%02X%02X%02X%02X", lSensor->Id()[0], lSensor->Id()[1], lSensor->Id()[2], lSensor->Id()[3], lSensor->Id()[4], lSensor->Id()[5], lSensor->Id()[6]);
                 printDebug("%s\n", lBuffer);
-                knx.getGroupObject(LOG_KoNewId).value(lBuffer, getDPT(VAL_DPT_16));
+                knx.getGroupObject(WIRE_KoNewId).value(lBuffer, getDPT(VAL_DPT_16));
                 sUnknownDeviceDelaySeconds = 2; // check in 2 Seconds for next new ID
             }
         }

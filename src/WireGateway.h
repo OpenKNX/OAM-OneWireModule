@@ -2,6 +2,7 @@
 #include <knx.h>
 
 // Parameter with single occurance
+
 #define LOG_NumChannels                0      // uint8_t
 #define LOG_StartupDelay               1      // int32_t
 #define LOG_Heartbeat                  5      // int32_t
@@ -139,63 +140,87 @@
 #define LOG_LedMapping                29      // 3 Bits, Bit 7-5
 #define     LOG_LedMappingMask 0xE0
 #define     LOG_LedMappingShift 5
-#define LOG_WireError                 45      // 1 Bit, Bit 7
-#define     LOG_WireErrorMask 0x80
-#define     LOG_WireErrorShift 7
-#define LOG_BusMasterCount            45      // 2 Bits, Bit 6-5
-#define     LOG_BusMasterCountMask 0x60
-#define     LOG_BusMasterCountShift 5
-#define LOG_IdSearch                  45      // 1 Bit, Bit 4
-#define     LOG_IdSearchMask 0x10
-#define     LOG_IdSearchShift 4
-#define LOG_IButton1                  45      // 1 Bit, Bit 3
-#define     LOG_IButton1Mask 0x08
-#define     LOG_IButton1Shift 3
-#define LOG_IButton2                  45      // 1 Bit, Bit 2
-#define     LOG_IButton2Mask 0x04
-#define     LOG_IButton2Shift 2
-#define LOG_IButton3                  45      // 1 Bit, Bit 1
-#define     LOG_IButton3Mask 0x02
-#define     LOG_IButton3Shift 1
-#define LOG_Group1                    46      // 1 Bit, Bit 7
-#define     LOG_Group1Mask 0x80
-#define     LOG_Group1Shift 7
-#define LOG_Group2                    46      // 1 Bit, Bit 6
-#define     LOG_Group2Mask 0x40
-#define     LOG_Group2Shift 6
-#define LOG_Group3                    46      // 1 Bit, Bit 5
-#define     LOG_Group3Mask 0x20
-#define     LOG_Group3Shift 5
-#define LOG_Group4                    46      // 1 Bit, Bit 4
-#define     LOG_Group4Mask 0x10
-#define     LOG_Group4Shift 4
-#define LOG_Group5                    46      // 1 Bit, Bit 3
-#define     LOG_Group5Mask 0x08
-#define     LOG_Group5Shift 3
-#define LOG_Group6                    46      // 1 Bit, Bit 2
-#define     LOG_Group6Mask 0x04
-#define     LOG_Group6Shift 2
-#define LOG_Group7                    46      // 1 Bit, Bit 1
-#define     LOG_Group7Mask 0x02
-#define     LOG_Group7Shift 1
-#define LOG_Group8                    46      // 1 Bit, Bit 0
-#define     LOG_Group8Mask 0x01
-#define     LOG_Group8Shift 0
-#define LOG_Busmaster1RSTL            47      // 4 Bits, Bit 7-4
-#define     LOG_Busmaster1RSTLMask 0xF0
-#define     LOG_Busmaster1RSTLShift 4
-#define LOG_Busmaster1MSP             47      // 4 Bits, Bit 3-0
-#define     LOG_Busmaster1MSPMask 0x0F
-#define     LOG_Busmaster1MSPShift 0
-#define LOG_Busmaster1W0L             48      // 4 Bits, Bit 7-4
-#define     LOG_Busmaster1W0LMask 0xF0
-#define     LOG_Busmaster1W0LShift 4
-#define LOG_Busmaster1REC0            48      // 4 Bits, Bit 3-0
-#define     LOG_Busmaster1REC0Mask 0x0F
-#define     LOG_Busmaster1REC0Shift 0
-#define LOG_Busmaster1WPU             49      // 4 Bits, Bit 7-4
-#define     LOG_Busmaster1WPUMask 0xF0
-#define     LOG_Busmaster1WPUShift 4
+
+#define LOG_KoHeartbeat 1
+#define LOG_KoTime 2
+#define LOG_KoDate 3
+#define LOG_KoVacation 4
+#define LOG_KoHoliday1 5
+#define LOG_KoHoliday2 6
+#define LOG_KoDiagnose 7
+#define LOG_KoLedLock 8
+#define LOG_KoBuzzerLock 9
+
+#define WIRE_WireError                 45      // 1 Bit, Bit 7
+#define     WIRE_WireErrorMask 0x80
+#define     WIRE_WireErrorShift 7
+#define WIRE_BusMasterCount            45      // 2 Bits, Bit 6-5
+#define     WIRE_BusMasterCountMask 0x60
+#define     WIRE_BusMasterCountShift 5
+#define WIRE_IdSearch                  45      // 1 Bit, Bit 4
+#define     WIRE_IdSearchMask 0x10
+#define     WIRE_IdSearchShift 4
+#define WIRE_IButton1                  45      // 1 Bit, Bit 3
+#define     WIRE_IButton1Mask 0x08
+#define     WIRE_IButton1Shift 3
+#define WIRE_IButton2                  45      // 1 Bit, Bit 2
+#define     WIRE_IButton2Mask 0x04
+#define     WIRE_IButton2Shift 2
+#define WIRE_IButton3                  45      // 1 Bit, Bit 1
+#define     WIRE_IButton3Mask 0x02
+#define     WIRE_IButton3Shift 1
+#define WIRE_Group1                    46      // 1 Bit, Bit 7
+#define     WIRE_Group1Mask 0x80
+#define     WIRE_Group1Shift 7
+#define WIRE_Group2                    46      // 1 Bit, Bit 6
+#define     WIRE_Group2Mask 0x40
+#define     WIRE_Group2Shift 6
+#define WIRE_Group3                    46      // 1 Bit, Bit 5
+#define     WIRE_Group3Mask 0x20
+#define     WIRE_Group3Shift 5
+#define WIRE_Group4                    46      // 1 Bit, Bit 4
+#define     WIRE_Group4Mask 0x10
+#define     WIRE_Group4Shift 4
+#define WIRE_Group5                    46      // 1 Bit, Bit 3
+#define     WIRE_Group5Mask 0x08
+#define     WIRE_Group5Shift 3
+#define WIRE_Group6                    46      // 1 Bit, Bit 2
+#define     WIRE_Group6Mask 0x04
+#define     WIRE_Group6Shift 2
+#define WIRE_Group7                    46      // 1 Bit, Bit 1
+#define     WIRE_Group7Mask 0x02
+#define     WIRE_Group7Shift 1
+#define WIRE_Group8                    46      // 1 Bit, Bit 0
+#define     WIRE_Group8Mask 0x01
+#define     WIRE_Group8Shift 0
+#define WIRE_Busmaster1RSTL            47      // 4 Bits, Bit 7-4
+#define     WIRE_Busmaster1RSTLMask 0xF0
+#define     WIRE_Busmaster1RSTLShift 4
+#define WIRE_Busmaster1MSP             47      // 4 Bits, Bit 3-0
+#define     WIRE_Busmaster1MSPMask 0x0F
+#define     WIRE_Busmaster1MSPShift 0
+#define WIRE_Busmaster1W0L             48      // 4 Bits, Bit 7-4
+#define     WIRE_Busmaster1W0LMask 0xF0
+#define     WIRE_Busmaster1W0LShift 4
+#define WIRE_Busmaster1REC0            48      // 4 Bits, Bit 3-0
+#define     WIRE_Busmaster1REC0Mask 0x0F
+#define     WIRE_Busmaster1REC0Shift 0
+#define WIRE_Busmaster1WPU             49      // 4 Bits, Bit 7-4
+#define     WIRE_Busmaster1WPUMask 0xF0
+#define     WIRE_Busmaster1WPUShift 4
+
+#define WIRE_KoNewId 20
+#define WIRE_KoErrorBusmaster1 21
+#define WIRE_KoErrorBusmaster2 22
+#define WIRE_KoErrorBusmaster3 23
+#define WIRE_KoGroup1 24
+#define WIRE_KoGroup2 25
+#define WIRE_KoGroup3 26
+#define WIRE_KoGroup4 27
+#define WIRE_KoGroup5 28
+#define WIRE_KoGroup6 29
+#define WIRE_KoGroup7 30
+#define WIRE_KoGroup8 31
 
 // Parameter per channel
 #define LOG_ParamBlockOffset 50
@@ -824,7 +849,7 @@
 #define LOG_KoKOfO 2
 
 // Parameter per channel
-#define WIRE_ParamBlockOffset 8370
+#define WIRE_ParamBlockOffset 258
 #define WIRE_ParamBlockSize 18
 #define WIRE_sDeviceId                  0      // char*, 7 Byte
 #define WIRE_sFamilyCode                0      // 8 Bits, Bit 7-0
@@ -969,27 +994,4 @@
 #define WIRE_KoOffset 50
 #define WIRE_KoBlockSize 1
 #define WIRE_KoKOs 0
-
-// Communication objects with single occurance
-#define LOG_KoHeartbeat 1
-#define LOG_KoTime 2
-#define LOG_KoDate 3
-#define LOG_KoVacation 4
-#define LOG_KoHoliday1 5
-#define LOG_KoHoliday2 6
-#define LOG_KoDiagnose 7
-#define LOG_KoLedLock 8
-#define LOG_KoBuzzerLock 9
-#define LOG_KoNewId 20
-#define LOG_KoErrorBusmaster1 21
-#define LOG_KoErrorBusmaster2 22
-#define LOG_KoErrorBusmaster3 23
-#define LOG_KoGroup1 24
-#define LOG_KoGroup2 25
-#define LOG_KoGroup3 26
-#define LOG_KoGroup4 27
-#define LOG_KoGroup5 28
-#define LOG_KoGroup6 29
-#define LOG_KoGroup7 30
-#define LOG_KoGroup8 31
 

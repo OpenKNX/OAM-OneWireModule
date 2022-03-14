@@ -149,7 +149,7 @@ void appLoop()
     ProcessReadRequests();
     gLogic.loop();
     WireDevice::loop();
-    uint8_t lNumBusmaster = (knx.paramByte(LOG_BusMasterCount) & LOG_BusMasterCountMask) >> LOG_BusMasterCountShift;
+    uint8_t lNumBusmaster = (knx.paramByte(WIRE_BusMasterCount) & WIRE_BusMasterCountMask) >> WIRE_BusMasterCountShift;
     for (uint8_t lBusmasterIndex = 0; lBusmasterIndex < lNumBusmaster; lBusmasterIndex++)
     {
         gBusMaster[lBusmasterIndex]->loop();
@@ -185,7 +185,7 @@ void appSetup(bool iSaveSupported)
         if (GroupObject::classCallback() == 0) GroupObject::classCallback(ProcessKoCallback);
         gLogic.setup(iSaveSupported);
         // should we search for new devices?
-        bool lSearchNewDevices = knx.paramByte(LOG_IdSearch) & LOG_IdSearchMask;
+        bool lSearchNewDevices = knx.paramByte(WIRE_IdSearch) & WIRE_IdSearchMask;
         // are there iButtons?
         // uint8_t lIsIButton = 0;
 
@@ -194,7 +194,7 @@ void appSetup(bool iSaveSupported)
 
         gBusMaster[0] = new OneWireDS2482(WireDevice::processNewIdCallback, WireDevice::knxLoopCallback);
         gBusMaster[0]->setup(0, 1, lSearchNewDevices); 
-        uint8_t lNumBusmaster = (knx.paramByte(LOG_BusMasterCount) & LOG_BusMasterCountMask) >> LOG_BusMasterCountShift;
+        uint8_t lNumBusmaster = (knx.paramByte(WIRE_BusMasterCount) & WIRE_BusMasterCountMask) >> WIRE_BusMasterCountShift;
 #if COUNT_1WIRE_BUSMASTER > 1
         if (lNumBusmaster > 1) {
             gBusMaster[1] = new OneWireDS2482(WireDevice::processNewIdCallback, WireDevice::knxLoopCallback);
