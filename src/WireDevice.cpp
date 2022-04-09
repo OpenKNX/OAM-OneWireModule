@@ -473,7 +473,7 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
         lValueFactor = 1000.0;
     }
     // process send cycle
-    uint32_t lCycle = knx.paramInt(iParamIndex + WIRE_sSensorCycle) * 1000;
+    uint32_t lCycle =  getDelayPattern(iParamIndex + WIRE_sSensorDelayBase);
 
     // we waited enough, let's send the value
     if (lCycle && delayCheck(mData.sensor.sendDelay, lCycle))

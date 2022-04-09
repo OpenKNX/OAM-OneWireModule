@@ -3,20 +3,6 @@
     // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
-        // {
-        //     "label": "Build on Linux",
-        //     "type": "shell",
-        //     "command": "cmake",
-        //     "args": [
-        //         "--build",
-        //         "linux"
-        //     ],
-        //     "group": {
-        //         "kind": "build",
-        //         "isDefault": true
-        //     },
-        //     "problemMatcher": []
-        // },
         {
             "label": "Build PlatformIO",
             "type": "shell",
@@ -44,20 +30,6 @@
             "problemMatcher": []
         },
         {
-            "label": "Upload ATMEL",
-            "type": "shell",
-            "command": "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\pio.exe",
-            "args": [
-                "run",
-                "-e",
-                "uploadATMEL",
-                "--target",
-                "upload"
-            ],
-            "group": "build",
-            "problemMatcher": []
-        },
-        {
             "label": "Upload USB",
             "type": "shell",
             "command": "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\pio.exe",
@@ -72,9 +44,9 @@
             "problemMatcher": []
         },
         {
-            "label": "MultiplyChannels",
+            "label": "OpenKNXproducer",
             "type": "shell",
-            "command": "${env:USERPROFILE}\\bin\\MultiplyChannels.exe",
+            "command": "${env:USERPROFILE}\\bin\\OpenKNXproducer.exe",
             "args": [
                 "create",
                 "--Debug",
@@ -84,17 +56,9 @@
             "group": "test"
         },
         {
-            "label": "MultiplyChannels-Release",
+            "label": "Build-Release",
             "type": "shell",
-            "command": "release\\BuildRelease.cmd",
-            "args": [],
-            "problemMatcher": [],
-            "group": "test"
-        },
-        {
-            "label": "MultiplyChannels-Beta",
-            "type": "shell",
-            "command": "beta\\BuildRelease.cmd",
+            "command": "scripts/Build-Release.ps1",
             "args": [],
             "problemMatcher": [],
             "group": "test"

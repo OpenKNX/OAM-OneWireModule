@@ -1,6 +1,5 @@
 #ifdef WIREGATEWAY
 #include "Helper.h"
-#include "Hardware.h"
 
 #include "Sensor.h"
 #include "OneWire.h"
@@ -45,7 +44,7 @@ typedef bool (*getSensorValue)(MeasureType, float&);
 void ProcessHeartbeat()
 {
     // the first heartbeat is send directly after startup delay of the device
-    if (gHeartbeatDelay == 0 || delayCheck(gHeartbeatDelay, knx.paramInt(LOG_Heartbeat) * 1000))
+    if (gHeartbeatDelay == 0 || delayCheck(gHeartbeatDelay, getDelayPattern(LOG_HeartbeatDelayBase)))
     {
         // we waited enough, let's send a heartbeat signal
         knx.getGroupObject(LOG_KoHeartbeat).value(true, getDPT(VAL_DPT_1));
@@ -76,7 +75,7 @@ void ProcessReadRequests() {
 // true solgange der Start des gesamten Moduls verzögert werden soll
 bool startupDelay()
 {
-    return !delayCheck(gStartupDelay, knx.paramInt(LOG_StartupDelay) * 1000);
+    return !delayCheck(gStartupDelay, getDelayPattern(LOG_StartupDelayBase));
 }
 
 bool processDiagnoseCommand()

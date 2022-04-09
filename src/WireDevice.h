@@ -1,6 +1,6 @@
 #pragma once
 #include "knx.h"
-#include "Hardware.h"
+#include "HardwareDevices.h"
 #include "Sensor.h"
 #include <OneWire.h>
 
