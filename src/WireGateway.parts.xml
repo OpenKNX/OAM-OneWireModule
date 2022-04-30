@@ -4,22 +4,13 @@
     <Manufacturer RefId="M-00FA">
       <ApplicationPrograms>
         <ApplicationProgram Id="M-00FA_A-0001-01-0000" ApplicationNumber="103" ApplicationVersion="10" ProgramType="ApplicationProgram" MaskVersion="MV-07B0" Name="WP-Sensor-Logic" LoadProcedureStyle="MergedProcedure" PeiType="0" DefaultLanguage="de" DynamicTableManagement="false" Linkable="true" MinEtsVersion="4.0">
+          <Static>
+          </Static>
           <Dynamic>
             <ChannelIndependentBlock>
               <ParameterBlock Id="M-00FA_A-0001-01-0000_PB-2" Name="Hardware" Text="WireGateway: Hardware (vorbelegt)">
                 <!-- Maximum number of Busmaster (used as Parameter for WireGateway and Sensormodul) -->
                 <ParameterRefRef RefId="M-00FA_A-0001-01-0000_P-%T%000029_R-%T%00002901" />
-                <!-- buzzer available (invisible, false) -->
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-1000035_R-100003502" />
-                <!-- rgb led available (invisible, false) -->
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-1000036_R-100003602" />
-                <!-- eeprom available (invisible, true) -->
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-1000037_R-100003701" />
-                <!-- move locally set values to global parameters -->
-                <!-- this is used for decoupling specific applications from global behaviour -->
-                <Assign TargetParamRefRef="M-00FA_A-0001-01-0000_UP-1000035_R-100003501" SourceParamRefRef="M-00FA_A-0001-01-0000_UP-1000035_R-100003502"/>
-                <Assign TargetParamRefRef="M-00FA_A-0001-01-0000_UP-1000036_R-100003601" SourceParamRefRef="M-00FA_A-0001-01-0000_UP-1000036_R-100003602"/>
-                <Assign TargetParamRefRef="M-00FA_A-0001-01-0000_UP-1000037_R-100003701" SourceParamRefRef="M-00FA_A-0001-01-0000_UP-1000037_R-100003702"/>
               </ParameterBlock>
               <ParameterBlock Id="M-00FA_A-0001-01-0000_PB-3" Name="Expert" Text="Experten-Einstellungen">
                 <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="Die Einstellungen dieser Seite sind nur für Experten, die sich genau mit 1-Wire-Bus-Timing auskennen. Das Datenblatt vom DS2484, Seite 13 ist heranzuziehen." UIHint="Information" />

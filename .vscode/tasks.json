@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build PlatformIO",
+            "label": "Build SAMD",
             "type": "shell",
             "command": "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\pio.exe",
             "args": [
@@ -16,7 +16,7 @@
             "problemMatcher": []
         },
         {
-            "label": "Upload JLINK",
+            "label": "Upload JLINK SAMD",
             "type": "shell",
             "command": "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\pio.exe",
             "args": [
@@ -30,7 +30,7 @@
             "problemMatcher": []
         },
         {
-            "label": "Upload USB",
+            "label": "Upload USB SAMD",
             "type": "shell",
             "command": "${env:USERPROFILE}\\.platformio\\penv\\Scripts\\pio.exe",
             "args": [
