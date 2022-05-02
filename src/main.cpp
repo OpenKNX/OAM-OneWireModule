@@ -1,3 +1,4 @@
+#ifdef WIREGATEWAY
 #include <knx.h>
 #include <Wire.h>
 #include "WireGateway.h"
@@ -68,3 +69,4 @@ void loop()
     if (knx.configured())
         appLoop();
 }
+#endif
