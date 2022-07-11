@@ -46,11 +46,14 @@
         {
             "label": "OpenKNXproducer",
             "type": "shell",
+            "options": {
+                "cwd": "${workspaceFolder}/src"
+            },
             "command": "${env:USERPROFILE}\\bin\\OpenKNXproducer.exe",
             "args": [
                 "create",
                 "--Debug",
-                "src/WireGateway"
+                "WireGateway"
             ],
             "problemMatcher": [],
             "group": "test"

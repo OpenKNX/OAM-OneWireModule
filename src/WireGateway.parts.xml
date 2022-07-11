@@ -1,26 +1,27 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<KNX xmlns:mc="http://github.com/mumpf/multiply-channels" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://knx.org/xml/project/14 ../../../knx.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CreatedBy="KNX MT" ToolVersion="5.1.255.16695" xmlns="http://knx.org/xml/project/14">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="../../Organization/knxprod-support/knx_project_20/knx-editor.xsd" type="application/xml" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<KNX xmlns:op="http://github.com/OpenKNX/OpenKNXproducer" xmlns="http://knx.org/xml/project/20" CreatedBy="KNX MT" ToolVersion="5.1.255.16695">
   <ManufacturerData>
     <Manufacturer RefId="M-00FA">
       <ApplicationPrograms>
-        <ApplicationProgram Id="M-00FA_A-0001-01-0000" ApplicationNumber="103" ApplicationVersion="10" ProgramType="ApplicationProgram" MaskVersion="MV-07B0" Name="WP-Sensor-Logic" LoadProcedureStyle="MergedProcedure" PeiType="0" DefaultLanguage="de" DynamicTableManagement="false" Linkable="true" MinEtsVersion="4.0">
+        <ApplicationProgram Id="%AID%" ApplicationNumber="103" ApplicationVersion="10" ProgramType="ApplicationProgram" MaskVersion="MV-07B0" Name="WP-Sensor-Logic" LoadProcedureStyle="MergedProcedure" PeiType="0" DefaultLanguage="de" DynamicTableManagement="false" Linkable="true" MinEtsVersion="4.0">
           <Static>
           </Static>
           <Dynamic>
             <ChannelIndependentBlock>
-              <ParameterBlock Id="M-00FA_A-0001-01-0000_PB-2" Name="Hardware" Text="WireGateway: Hardware (vorbelegt)">
+              <ParameterBlock Id="%AID%_PB-2" Name="Hardware" Text="WireGateway: Hardware (vorbelegt)">
                 <!-- Maximum number of Busmaster (used as Parameter for WireGateway and Sensormodul) -->
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_P-%T%000029_R-%T%00002901" />
+                <ParameterRefRef RefId="%AID%_P-%T%000029_R-%T%00002901" />
               </ParameterBlock>
-              <ParameterBlock Id="M-00FA_A-0001-01-0000_PB-3" Name="Expert" Text="Experten-Einstellungen">
-                <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="Die Einstellungen dieser Seite sind nur für Experten, die sich genau mit 1-Wire-Bus-Timing auskennen. Das Datenblatt vom DS2484, Seite 13 ist heranzuziehen." UIHint="Information" />
-                <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="Falls sich duch Anpassungen hier das Modul nicht mehr über die ETS programmieren lässt, bitte erneut die Firmware per USB aufspielen und dann mit Standardparametern neu programmieren." />
-                <ParameterSeparator Id="M-00FA_A-0001-01-0000_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-%T%000030_R-%T%00003001" />
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-%T%000031_R-%T%00003101" />
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-%T%000032_R-%T%00003201" />
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-%T%000033_R-%T%00003301" />
-                <ParameterRefRef RefId="M-00FA_A-0001-01-0000_UP-%T%000034_R-%T%00003401" />
+              <ParameterBlock Id="%AID%_PB-3" Name="Expert" Text="Experten-Einstellungen">
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Die Einstellungen dieser Seite sind nur für Experten, die sich genau mit 1-Wire-Bus-Timing auskennen. Das Datenblatt vom DS2484, Seite 13 ist heranzuziehen." UIHint="Information" />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="Falls sich duch Anpassungen hier das Modul nicht mehr über die ETS programmieren lässt, bitte erneut die Firmware per USB aufspielen und dann mit Standardparametern neu programmieren." />
+                <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                <ParameterRefRef RefId="%AID%_UP-%T%000030_R-%T%00003001" />
+                <ParameterRefRef RefId="%AID%_UP-%T%000031_R-%T%00003101" />
+                <ParameterRefRef RefId="%AID%_UP-%T%000032_R-%T%00003201" />
+                <ParameterRefRef RefId="%AID%_UP-%T%000033_R-%T%00003301" />
+                <ParameterRefRef RefId="%AID%_UP-%T%000034_R-%T%00003401" />
               </ParameterBlock>
             </ChannelIndependentBlock>
           </Dynamic>
