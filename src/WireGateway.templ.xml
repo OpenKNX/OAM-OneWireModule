@@ -174,587 +174,589 @@
             </ComObjectRefs>
           </Static>
           <Dynamic>
-            <choose ParamRefId="%AID%_P-%T%000028_R-%T%00002801">
-              <when test=">=%C%">
-                <ParameterBlock Id="%AID%_PB-%C%1" Name="Device%C%Page" Text="Gerät %C%: {{0:unbenannt}}" TextParameterRefId="%AID%_P-%T%%CCC%042_R-%T%%CCC%04201">
-                  <ParameterSeparator Id="%AID%_PS-11" Text="Kanaldefinition" UIHint="Headline" />
-                  <ParameterRefRef RefId="%AID%_P-%T%%CCC%042_R-%T%%CCC%04201" />
-                  <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                  <ParameterRefRef RefId="%AID%_UP-%T%%CCC%010_R-%T%%CCC%01001" />
-                  <ParameterSeparator Id="%AID%_PS-11" Text="Geräte-Id %C%" UIHint="Headline" />
-                  <ParameterRefRef RefId="%AID%_UP-%T%%CCC%011_R-%T%%CCC%01101" />
-                  <choose ParamRefId="%AID%_UP-%T%%CCC%011_R-%T%%CCC%01101">
-                    <when test="!=0">
-                      <ParameterBlock Id="%AID%_PB-2" Name="Id%C%" Text="Id" Inline="true" Layout="Grid">
-                        <Rows>
-                          <Row Id="%AID%_PB-2_R-1" Name="Row1" />
-                        </Rows>
-                        <Columns>
-                          <Column Id="%AID%_PB-2_C-1" Name="Col1" Width="5%" />
-                          <Column Id="%AID%_PB-2_C-2" Name="Col2" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-3" Name="Col3" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-4" Name="Col4" Width="2%" />
-                          <Column Id="%AID%_PB-2_C-5" Name="Col5" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-6" Name="Col6" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-7" Name="Col7" Width="2%" />
-                          <Column Id="%AID%_PB-2_C-8" Name="Col8" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-9" Name="Col9" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-10" Name="Col10" Width="2%" />
-                          <Column Id="%AID%_PB-2_C-11" Name="Col11" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-12" Name="Col12" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-13" Name="Col13" Width="2%" />
-                          <Column Id="%AID%_PB-2_C-14" Name="Col14" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-15" Name="Col15" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-16" Name="Col16" Width="2%" />
-                          <Column Id="%AID%_PB-2_C-17" Name="Col17" Width="9%" />
-                          <Column Id="%AID%_PB-2_C-18" Name="Col18" Width="9%" />
-                        </Columns>
-                        <ParameterRefRef RefId="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Cell="1,1" />
-                        <!-- <ParameterSeparator Id="%AID%_PS-nnn" Text="." Cell="1,3"/> -->
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%012_R-%T%%CCC%01201" Cell="1,2" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%013_R-%T%%CCC%01301" Cell="1,3" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%014_R-%T%%CCC%01401" Cell="1,5" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%015_R-%T%%CCC%01501" Cell="1,6" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%016_R-%T%%CCC%01601" Cell="1,8" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%017_R-%T%%CCC%01701" Cell="1,9" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%018_R-%T%%CCC%01801" Cell="1,11" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%019_R-%T%%CCC%01901" Cell="1,12" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%020_R-%T%%CCC%02001" Cell="1,14" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%021_R-%T%%CCC%02101" Cell="1,15" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%022_R-%T%%CCC%02201" Cell="1,17" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%023_R-%T%%CCC%02301" Cell="1,18" />
-                      </ParameterBlock>
-                      <choose ParamRefId="%AID%_UP-%T%000001_R-%T%00000101">
-                        <when test="1">
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%039_R-%T%%CCC%03901" />
-                        </when>
-                        <when test="2">
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%040_R-%T%%CCC%04001" />
-                        </when>
-                        <when test="3">
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%041_R-%T%%CCC%04101" />
-                        </when>
-                      </choose>
-                    </when>
-                    <when test="16">
-                      <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-11" Text="Temperatur" UIHint="Headline" />
-                      <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="10" />
-                      <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00102" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%030_R-%T%%CCC%03001" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02501" />
-                      <!-- Cyclic send Delay pattern -->
-                      <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                        <Rows>
-                          <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                        </Rows>
-                        <Columns>
-                          <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                          <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                          <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                        </Columns>
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                      </ParameterBlock>
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02701" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                    </when>
-                    <when test="40">
-                      <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-11" Text="Temperatur" UIHint="Headline" />
-                      <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="28" />
-                      <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00102" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%065_R-%T%%CCC%06501" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02501" />
-                      <!-- Cyclic send Delay pattern -->
-                      <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                        <Rows>
-                          <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                        </Rows>
-                        <Columns>
-                          <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                          <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                          <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                        </Columns>
-                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                      </ParameterBlock>
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02701" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                    </when>
-                    <when test="38">
-                      <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="26" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%045_R-%T%%CCC%04501" />
-                      <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%045_R-%T%%CCC%04501">
-                        <when test="10 15">
-                          <ParameterSeparator Id="%AID%_PS-11" Text="Temperatur" UIHint="Headline" />
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00102" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02501" />
-                          <!-- Cyclic send Delay pattern -->
-                          <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                            <Rows>
-                              <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                              <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                              <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                            </Columns>
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                          </ParameterBlock>
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02701" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                        </when>
-                        <when test="11 12 13">
-                          <ParameterSeparator Id="%AID%_PS-11" Text="Spannung" UIHint="Headline" />
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00108" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02505" />
-                          <!-- Cyclic send Delay pattern -->
-                          <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                            <Rows>
-                              <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                              <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                              <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                            </Columns>
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                          </ParameterBlock>
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02705" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                        </when>
-                        <when test="16">
-                          <ParameterSeparator Id="%AID%_PS-11" Text="Luftfeuchte" UIHint="Headline" />
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00104" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02502" />
-                          <!-- Cyclic send Delay pattern -->
-                          <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                            <Rows>
-                              <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                              <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                              <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                            </Columns>
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                          </ParameterBlock>
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02702" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                        </when>
-                        <when test="17">
-                          <ParameterSeparator Id="%AID%_PS-11" Text="Helligkeit" UIHint="Headline" />
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00103" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02503" />
-                          <!-- Cyclic send Delay pattern -->
-                          <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                            <Rows>
-                              <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                              <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                              <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                            </Columns>
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                          </ParameterBlock>
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02703" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                        </when>
-                        <when test=">=50">
-                          <ParameterSeparator Id="%AID%_PS-11" Text="Benutzterdefinierter Sensorwert" UIHint="Headline" />
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00105" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02504" />
-                          <!-- Cyclic send Delay pattern -->
-                          <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
-                            <Rows>
-                              <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
-                              <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
-                              <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
-                            </Columns>
-                            <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
-                          </ParameterBlock>
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02704" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
-                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
-                        </when>
-                      </choose>
-                    </when>
-                    <when test="1">
-                      <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-11" Text="iButton" UIHint="Headline" />
-                      <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="01" />
-                      <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%030_R-%T%%CCC%03001" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%062_R-%T%%CCC%06201" />
-                      <ParameterSeparator Id="%AID%_PS-2" Text="Dieser iButton nimmt an folgenden Gruppen teil:" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%031_R-%T%%CCC%03101" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%032_R-%T%%CCC%03201" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%033_R-%T%%CCC%03301" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%034_R-%T%%CCC%03401" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%035_R-%T%%CCC%03501" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%036_R-%T%%CCC%03601" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%037_R-%T%%CCC%03701" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%038_R-%T%%CCC%03801" />
-                      <!-- turn on according group-KO if any iButton is part of the group -->
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%031_R-%T%%CCC%03101">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000024_R-%T%00002401" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%032_R-%T%%CCC%03201">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000025_R-%T%00002501" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%033_R-%T%%CCC%03301">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000026_R-%T%00002601" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%034_R-%T%%CCC%03401">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000027_R-%T%00002701" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%035_R-%T%%CCC%03501">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000028_R-%T%00002801" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%036_R-%T%%CCC%03601">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000029_R-%T%00002901" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%037_R-%T%%CCC%03701">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000030_R-%T%00003001" />
-                        </when>
-                      </choose>
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%038_R-%T%%CCC%03801">
-                        <when test="1">
-                          <ComObjectRefRef RefId="%AID%_O-%T%000031_R-%T%00003101" />
-                        </when>
-                      </choose>
-                    </when>
-                    <when test="58">
-                      <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-11" Text="Ein- und Ausgang" UIHint="Headline" />
-                      <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="3A" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%063_R-%T%%CCC%06301" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%064_R-%T%%CCC%06401" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%044_R-%T%%CCC%04401" />
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%044_R-%T%%CCC%04401">
-                        <when test="1">
-                          <ParameterBlock Id="%AID%_PB-6" Name="IoBit0%C%2" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-6_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-6_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-6_C-1" Name="Col1" Text="Bit 0" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="2">
-                          <ParameterBlock Id="%AID%_PB-7" Name="IoBit1%C%2" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-7_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-7_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-7_C-1" Name="Col1" Text="Bit 1" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="9">
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00107" />
-                          <ParameterBlock Id="%AID%_PB-5" Name="IoByte%C%2" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-5_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-5_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-5_C-1" Name="Col1" Text="Bit 1" Width="25%" />
-                              <Column Id="%AID%_PB-5_C-2" Name="Col2" Text="Bit 0" Width="25%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,2" />
-                          </ParameterBlock>
-                        </when>
-                      </choose>
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Anmerkung:" />
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Wenn für das selbe IO-Gerät (gleiche Geräte-Id) sowohl Byte- wie auch Bit-Definitionen vorgenommen werden, dann müssen die Einstellungen für die Bits denen der entsprechenden Bits im Byte gleichen." />
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Man kann also nicht bei der Byte-Definition das Bit 3 als Ausgang und bei der Bit-Definition dieses Bit als Eingang festlegen. Gleiches gilt für die Invertieren-Einstellugnen." />
-                    </when>
-                    <when test="41">
-                      <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-11" Text="Ein- und Ausgang" UIHint="Headline" />
-                      <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="29" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%063_R-%T%%CCC%06301" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%064_R-%T%%CCC%06401" />
-                      <ParameterRefRef RefId="%AID%_UP-%T%%CCC%043_R-%T%%CCC%04301" />
-                      <choose ParamRefId="%AID%_UP-%T%%CCC%043_R-%T%%CCC%04301">
-                        <when test="1">
-                          <ParameterBlock Id="%AID%_PB-8" Name="IoBit0%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-8_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-8_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-8_C-1" Name="Col1" Text="Bit 0" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="2">
-                          <ParameterBlock Id="%AID%_PB-9" Name="IoBit1%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-9_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-9_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-9_C-1" Name="Col1" Text="Bit 1" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="3">
-                          <ParameterBlock Id="%AID%_PB-10" Name="IoBit2%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-10_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-10_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-8_C-1" Name="Col1" Text="Bit 2" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%048_R-%T%%CCC%04801" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%056_R-%T%%CCC%05601" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%048_R-%T%%CCC%04801">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="4">
-                          <ParameterBlock Id="%AID%_PB-11" Name="IoBit3%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-11_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-11_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-11_C-1" Name="Col1" Text="Bit 3" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%049_R-%T%%CCC%04901" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%057_R-%T%%CCC%05701" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%049_R-%T%%CCC%04901">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="5">
-                          <ParameterBlock Id="%AID%_PB-12" Name="IoBit4%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-12_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-12_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-12_C-1" Name="Col1" Text="Bit 4" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%050_R-%T%%CCC%05001" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%058_R-%T%%CCC%05801" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%050_R-%T%%CCC%05001">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="6">
-                          <ParameterBlock Id="%AID%_PB-13" Name="IoBit5%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-13_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-13_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-13_C-1" Name="Col1" Text="Bit 5" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%051_R-%T%%CCC%05101" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%059_R-%T%%CCC%05901" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%051_R-%T%%CCC%05101">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="7">
-                          <ParameterBlock Id="%AID%_PB-14" Name="IoBit6%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-14_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-14_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-14_C-1" Name="Col1" Text="Bit 6" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%052_R-%T%%CCC%05201" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%060_R-%T%%CCC%06001" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%052_R-%T%%CCC%05201">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="8">
-                          <ParameterBlock Id="%AID%_PB-15" Name="IoBit7%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-15_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-15_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-15_C-1" Name="Col1" Text="Bit 7" Width="41%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%053_R-%T%%CCC%05301" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%061_R-%T%%CCC%06101" Cell="2,1" />
-                          </ParameterBlock>
-                          <choose ParamRefId="%AID%_UP-%T%%CCC%053_R-%T%%CCC%05301">
-                            <when test="0">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
-                            </when>
-                            <when test="1">
-                              <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
-                            </when>
-                          </choose>
-                        </when>
-                        <when test="9">
-                          <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00107" />
-                          <ParameterBlock Id="%AID%_PB-4" Name="IoByte%C%" Text="IO" Inline="true" Layout="Table">
-                            <Rows>
-                              <Row Id="%AID%_PB-4_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
-                              <Row Id="%AID%_PB-4_R-2" Name="Row2" Text="Invertieren" />
-                            </Rows>
-                            <Columns>
-                              <Column Id="%AID%_PB-4_C-1" Name="Col1" Text="Bit 7" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-2" Name="Col2" Text="Bit 6" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-3" Name="Col3" Text="Bit 5" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-4" Name="Col4" Text="Bit 4" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-5" Name="Col5" Text="Bit 3" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-6" Name="Col6" Text="Bit 2" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-7" Name="Col7" Text="Bit 1" Width="13%" />
-                              <Column Id="%AID%_PB-4_C-8" Name="Col8" Text="Bit 0" Width="13%" />
-                            </Columns>
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%053_R-%T%%CCC%05301" Cell="1,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%052_R-%T%%CCC%05201" Cell="1,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%051_R-%T%%CCC%05101" Cell="1,3" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%050_R-%T%%CCC%05001" Cell="1,4" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%049_R-%T%%CCC%04901" Cell="1,5" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%048_R-%T%%CCC%04801" Cell="1,6" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,7" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,8" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%061_R-%T%%CCC%06101" Cell="2,1" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%060_R-%T%%CCC%06001" Cell="2,2" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%059_R-%T%%CCC%05901" Cell="2,3" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%058_R-%T%%CCC%05801" Cell="2,4" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%057_R-%T%%CCC%05701" Cell="2,5" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%056_R-%T%%CCC%05601" Cell="2,6" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,7" />
-                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,8" />
-                          </ParameterBlock>
-                        </when>
-                      </choose>
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Anmerkung:" />
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Wenn für das selbe IO-Gerät (gleiche Geräte-Id) sowohl Byte- wie auch Bit-Definitionen vorgenommen werden, dann müssen die Einstellungen für die Bits denen der entsprechenden Bits im Byte gleichen." />
-                      <ParameterSeparator Id="%AID%_PS-nnn" Text="Man kann also nicht bei der Byte-Definition das Bit 3 als Ausgang und bei der Bit-Definition dieses Bit als Eingang festlegen. Gleiches gilt für die Invertieren-Einstellugnen." />
-                    </when>
-                  </choose>
-                </ParameterBlock>
-              </when>
-            </choose>
+            <ChannelIndependentBlock>
+              <choose ParamRefId="%AID%_P-%T%000028_R-%T%00002801">
+                <when test=">=%C%">
+                  <ParameterBlock Id="%AID%_PB-%C%1" Name="Device%C%Page" Text="Gerät %C%: {{0:unbenannt}}" TextParameterRefId="%AID%_P-%T%%CCC%042_R-%T%%CCC%04201">
+                    <ParameterSeparator Id="%AID%_PS-11" Text="Kanaldefinition" UIHint="Headline" />
+                    <ParameterRefRef RefId="%AID%_P-%T%%CCC%042_R-%T%%CCC%04201" />
+                    <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                    <ParameterRefRef RefId="%AID%_UP-%T%%CCC%010_R-%T%%CCC%01001" />
+                    <ParameterSeparator Id="%AID%_PS-11" Text="Geräte-Id %C%" UIHint="Headline" />
+                    <ParameterRefRef RefId="%AID%_UP-%T%%CCC%011_R-%T%%CCC%01101" />
+                    <choose ParamRefId="%AID%_UP-%T%%CCC%011_R-%T%%CCC%01101">
+                      <when test="!=0">
+                        <ParameterBlock Id="%AID%_PB-2" Name="Id%C%" Text="Id" Inline="true" Layout="Grid">
+                          <Rows>
+                            <Row Id="%AID%_PB-2_R-1" Name="Row1" />
+                          </Rows>
+                          <Columns>
+                            <Column Id="%AID%_PB-2_C-1" Name="Col1" Width="5%" />
+                            <Column Id="%AID%_PB-2_C-2" Name="Col2" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-3" Name="Col3" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-4" Name="Col4" Width="2%" />
+                            <Column Id="%AID%_PB-2_C-5" Name="Col5" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-6" Name="Col6" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-7" Name="Col7" Width="2%" />
+                            <Column Id="%AID%_PB-2_C-8" Name="Col8" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-9" Name="Col9" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-10" Name="Col10" Width="2%" />
+                            <Column Id="%AID%_PB-2_C-11" Name="Col11" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-12" Name="Col12" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-13" Name="Col13" Width="2%" />
+                            <Column Id="%AID%_PB-2_C-14" Name="Col14" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-15" Name="Col15" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-16" Name="Col16" Width="2%" />
+                            <Column Id="%AID%_PB-2_C-17" Name="Col17" Width="9%" />
+                            <Column Id="%AID%_PB-2_C-18" Name="Col18" Width="9%" />
+                          </Columns>
+                          <ParameterRefRef RefId="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Cell="1,1" />
+                          <!-- <ParameterSeparator Id="%AID%_PS-nnn" Text="." Cell="1,3"/> -->
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%012_R-%T%%CCC%01201" Cell="1,2" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%013_R-%T%%CCC%01301" Cell="1,3" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%014_R-%T%%CCC%01401" Cell="1,5" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%015_R-%T%%CCC%01501" Cell="1,6" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%016_R-%T%%CCC%01601" Cell="1,8" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%017_R-%T%%CCC%01701" Cell="1,9" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%018_R-%T%%CCC%01801" Cell="1,11" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%019_R-%T%%CCC%01901" Cell="1,12" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%020_R-%T%%CCC%02001" Cell="1,14" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%021_R-%T%%CCC%02101" Cell="1,15" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%022_R-%T%%CCC%02201" Cell="1,17" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%023_R-%T%%CCC%02301" Cell="1,18" />
+                        </ParameterBlock>
+                        <choose ParamRefId="%AID%_UP-%T%000001_R-%T%00000101">
+                          <when test="1">
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%039_R-%T%%CCC%03901" />
+                          </when>
+                          <when test="2">
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%040_R-%T%%CCC%04001" />
+                          </when>
+                          <when test="3">
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%041_R-%T%%CCC%04101" />
+                          </when>
+                        </choose>
+                      </when>
+                      <when test="16">
+                        <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-11" Text="Temperatur" UIHint="Headline" />
+                        <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="10" />
+                        <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00102" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%030_R-%T%%CCC%03001" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02501" />
+                        <!-- Cyclic send Delay pattern -->
+                        <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                          <Rows>
+                            <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                          </Rows>
+                          <Columns>
+                            <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                            <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                            <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                          </Columns>
+                          <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                        </ParameterBlock>
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02701" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                      </when>
+                      <when test="40">
+                        <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-11" Text="Temperatur" UIHint="Headline" />
+                        <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="28" />
+                        <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00102" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%065_R-%T%%CCC%06501" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02501" />
+                        <!-- Cyclic send Delay pattern -->
+                        <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                          <Rows>
+                            <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                          </Rows>
+                          <Columns>
+                            <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                            <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                            <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                          </Columns>
+                          <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                          <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                        </ParameterBlock>
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02701" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                      </when>
+                      <when test="38">
+                        <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="26" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%045_R-%T%%CCC%04501" />
+                        <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%045_R-%T%%CCC%04501">
+                          <when test="10 15">
+                            <ParameterSeparator Id="%AID%_PS-11" Text="Temperatur" UIHint="Headline" />
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00102" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02501" />
+                            <!-- Cyclic send Delay pattern -->
+                            <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                              <Rows>
+                                <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                                <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                                <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                              </Columns>
+                              <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                            </ParameterBlock>
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02701" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                          </when>
+                          <when test="11 12 13">
+                            <ParameterSeparator Id="%AID%_PS-11" Text="Spannung" UIHint="Headline" />
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00108" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02505" />
+                            <!-- Cyclic send Delay pattern -->
+                            <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                              <Rows>
+                                <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                                <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                                <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                              </Columns>
+                              <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                            </ParameterBlock>
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02705" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                          </when>
+                          <when test="16">
+                            <ParameterSeparator Id="%AID%_PS-11" Text="Luftfeuchte" UIHint="Headline" />
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00104" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02502" />
+                            <!-- Cyclic send Delay pattern -->
+                            <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                              <Rows>
+                                <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                                <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                                <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                              </Columns>
+                              <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                            </ParameterBlock>
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02702" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                          </when>
+                          <when test="17">
+                            <ParameterSeparator Id="%AID%_PS-11" Text="Helligkeit" UIHint="Headline" />
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00103" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02503" />
+                            <!-- Cyclic send Delay pattern -->
+                            <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                              <Rows>
+                                <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                                <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                                <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                              </Columns>
+                              <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                            </ParameterBlock>
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02703" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                          </when>
+                          <when test=">=50">
+                            <ParameterSeparator Id="%AID%_PS-11" Text="Benutzterdefinierter Sensorwert" UIHint="Headline" />
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00105" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%025_R-%T%%CCC%02504" />
+                            <!-- Cyclic send Delay pattern -->
+                            <ParameterBlock Id="%AID%_PB-nnn" Name="s%C%OCycleDelay" Inline="true" Layout="Grid">
+                              <Rows>
+                                <Row Id="%AID%_PB-nnn_R-1" Name="Row1" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-nnn_C-1" Name="Col1" Width="45%" />
+                                <Column Id="%AID%_PB-nnn_C-2" Name="Col2" Width="15%" />
+                                <Column Id="%AID%_PB-nnn_C-3" Name="Col3" Width="25%" />
+                              </Columns>
+                              <ParameterSeparator Id="%AID%_PS-nnn" Text="Zyklisch senden &#10;(0 = nicht senden)" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%026_R-%T%%CCC%02601" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%066_R-%T%%CCC%06601" Cell="1,3" />
+                            </ParameterBlock>
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%027_R-%T%%CCC%02704" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%028_R-%T%%CCC%02801" />
+                            <ParameterRefRef RefId="%AID%_UP-%T%%CCC%029_R-%T%%CCC%02901" />
+                          </when>
+                        </choose>
+                      </when>
+                      <when test="1">
+                        <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-11" Text="iButton" UIHint="Headline" />
+                        <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="01" />
+                        <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%030_R-%T%%CCC%03001" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%062_R-%T%%CCC%06201" />
+                        <ParameterSeparator Id="%AID%_PS-2" Text="Dieser iButton nimmt an folgenden Gruppen teil:" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%031_R-%T%%CCC%03101" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%032_R-%T%%CCC%03201" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%033_R-%T%%CCC%03301" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%034_R-%T%%CCC%03401" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%035_R-%T%%CCC%03501" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%036_R-%T%%CCC%03601" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%037_R-%T%%CCC%03701" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%038_R-%T%%CCC%03801" />
+                        <!-- turn on according group-KO if any iButton is part of the group -->
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%031_R-%T%%CCC%03101">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000024_R-%T%00002401" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%032_R-%T%%CCC%03201">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000025_R-%T%00002501" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%033_R-%T%%CCC%03301">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000026_R-%T%00002601" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%034_R-%T%%CCC%03401">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000027_R-%T%00002701" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%035_R-%T%%CCC%03501">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000028_R-%T%00002801" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%036_R-%T%%CCC%03601">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000029_R-%T%00002901" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%037_R-%T%%CCC%03701">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000030_R-%T%00003001" />
+                          </when>
+                        </choose>
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%038_R-%T%%CCC%03801">
+                          <when test="1">
+                            <ComObjectRefRef RefId="%AID%_O-%T%000031_R-%T%00003101" />
+                          </when>
+                        </choose>
+                      </when>
+                      <when test="58">
+                        <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-11" Text="Ein- und Ausgang" UIHint="Headline" />
+                        <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="3A" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%063_R-%T%%CCC%06301" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%064_R-%T%%CCC%06401" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%044_R-%T%%CCC%04401" />
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%044_R-%T%%CCC%04401">
+                          <when test="1">
+                            <ParameterBlock Id="%AID%_PB-6" Name="IoBit0%C%2" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-6_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-6_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-6_C-1" Name="Col1" Text="Bit 0" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="2">
+                            <ParameterBlock Id="%AID%_PB-7" Name="IoBit1%C%2" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-7_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-7_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-7_C-1" Name="Col1" Text="Bit 1" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="9">
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00107" />
+                            <ParameterBlock Id="%AID%_PB-5" Name="IoByte%C%2" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-5_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-5_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-5_C-1" Name="Col1" Text="Bit 1" Width="25%" />
+                                <Column Id="%AID%_PB-5_C-2" Name="Col2" Text="Bit 0" Width="25%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,2" />
+                            </ParameterBlock>
+                          </when>
+                        </choose>
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Anmerkung:" />
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Wenn für das selbe IO-Gerät (gleiche Geräte-Id) sowohl Byte- wie auch Bit-Definitionen vorgenommen werden, dann müssen die Einstellungen für die Bits denen der entsprechenden Bits im Byte gleichen." />
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Man kann also nicht bei der Byte-Definition das Bit 3 als Ausgang und bei der Bit-Definition dieses Bit als Eingang festlegen. Gleiches gilt für die Invertieren-Einstellugnen." />
+                      </when>
+                      <when test="41">
+                        <ParameterSeparator Id="%AID%_PS-1" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-11" Text="Ein- und Ausgang" UIHint="Headline" />
+                        <Assign TargetParamRefRef="%AID%_P-%T%%CCC%024_R-%T%%CCC%02401" Value="29" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%063_R-%T%%CCC%06301" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%064_R-%T%%CCC%06401" />
+                        <ParameterRefRef RefId="%AID%_UP-%T%%CCC%043_R-%T%%CCC%04301" />
+                        <choose ParamRefId="%AID%_UP-%T%%CCC%043_R-%T%%CCC%04301">
+                          <when test="1">
+                            <ParameterBlock Id="%AID%_PB-8" Name="IoBit0%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-8_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-8_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-8_C-1" Name="Col1" Text="Bit 0" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="2">
+                            <ParameterBlock Id="%AID%_PB-9" Name="IoBit1%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-9_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-9_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-9_C-1" Name="Col1" Text="Bit 1" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="3">
+                            <ParameterBlock Id="%AID%_PB-10" Name="IoBit2%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-10_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-10_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-8_C-1" Name="Col1" Text="Bit 2" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%048_R-%T%%CCC%04801" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%056_R-%T%%CCC%05601" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%048_R-%T%%CCC%04801">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="4">
+                            <ParameterBlock Id="%AID%_PB-11" Name="IoBit3%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-11_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-11_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-11_C-1" Name="Col1" Text="Bit 3" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%049_R-%T%%CCC%04901" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%057_R-%T%%CCC%05701" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%049_R-%T%%CCC%04901">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="5">
+                            <ParameterBlock Id="%AID%_PB-12" Name="IoBit4%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-12_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-12_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-12_C-1" Name="Col1" Text="Bit 4" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%050_R-%T%%CCC%05001" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%058_R-%T%%CCC%05801" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%050_R-%T%%CCC%05001">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="6">
+                            <ParameterBlock Id="%AID%_PB-13" Name="IoBit5%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-13_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-13_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-13_C-1" Name="Col1" Text="Bit 5" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%051_R-%T%%CCC%05101" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%059_R-%T%%CCC%05901" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%051_R-%T%%CCC%05101">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="7">
+                            <ParameterBlock Id="%AID%_PB-14" Name="IoBit6%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-14_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-14_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-14_C-1" Name="Col1" Text="Bit 6" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%052_R-%T%%CCC%05201" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%060_R-%T%%CCC%06001" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%052_R-%T%%CCC%05201">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="8">
+                            <ParameterBlock Id="%AID%_PB-15" Name="IoBit7%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-15_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-15_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-15_C-1" Name="Col1" Text="Bit 7" Width="41%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%053_R-%T%%CCC%05301" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%061_R-%T%%CCC%06101" Cell="2,1" />
+                            </ParameterBlock>
+                            <choose ParamRefId="%AID%_UP-%T%%CCC%053_R-%T%%CCC%05301">
+                              <when test="0">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00106" />
+                              </when>
+                              <when test="1">
+                                <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00101" />
+                              </when>
+                            </choose>
+                          </when>
+                          <when test="9">
+                            <ComObjectRefRef RefId="%AID%_O-%T%%CCC%001_R-%T%%CCC%00107" />
+                            <ParameterBlock Id="%AID%_PB-4" Name="IoByte%C%" Text="IO" Inline="true" Layout="Table">
+                              <Rows>
+                                <Row Id="%AID%_PB-4_R-1" Name="Row1" Text="Ein-/Ausgabe (an=Eingabe)" />
+                                <Row Id="%AID%_PB-4_R-2" Name="Row2" Text="Invertieren" />
+                              </Rows>
+                              <Columns>
+                                <Column Id="%AID%_PB-4_C-1" Name="Col1" Text="Bit 7" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-2" Name="Col2" Text="Bit 6" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-3" Name="Col3" Text="Bit 5" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-4" Name="Col4" Text="Bit 4" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-5" Name="Col5" Text="Bit 3" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-6" Name="Col6" Text="Bit 2" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-7" Name="Col7" Text="Bit 1" Width="13%" />
+                                <Column Id="%AID%_PB-4_C-8" Name="Col8" Text="Bit 0" Width="13%" />
+                              </Columns>
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%053_R-%T%%CCC%05301" Cell="1,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%052_R-%T%%CCC%05201" Cell="1,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%051_R-%T%%CCC%05101" Cell="1,3" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%050_R-%T%%CCC%05001" Cell="1,4" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%049_R-%T%%CCC%04901" Cell="1,5" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%048_R-%T%%CCC%04801" Cell="1,6" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%047_R-%T%%CCC%04701" Cell="1,7" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%046_R-%T%%CCC%04601" Cell="1,8" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%061_R-%T%%CCC%06101" Cell="2,1" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%060_R-%T%%CCC%06001" Cell="2,2" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%059_R-%T%%CCC%05901" Cell="2,3" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%058_R-%T%%CCC%05801" Cell="2,4" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%057_R-%T%%CCC%05701" Cell="2,5" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%056_R-%T%%CCC%05601" Cell="2,6" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%055_R-%T%%CCC%05501" Cell="2,7" />
+                              <ParameterRefRef RefId="%AID%_UP-%T%%CCC%054_R-%T%%CCC%05401" Cell="2,8" />
+                            </ParameterBlock>
+                          </when>
+                        </choose>
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="" UIHint="HorizontalRuler" />
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Anmerkung:" />
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Wenn für das selbe IO-Gerät (gleiche Geräte-Id) sowohl Byte- wie auch Bit-Definitionen vorgenommen werden, dann müssen die Einstellungen für die Bits denen der entsprechenden Bits im Byte gleichen." />
+                        <ParameterSeparator Id="%AID%_PS-nnn" Text="Man kann also nicht bei der Byte-Definition das Bit 3 als Ausgang und bei der Bit-Definition dieses Bit als Eingang festlegen. Gleiches gilt für die Invertieren-Einstellugnen." />
+                      </when>
+                    </choose>
+                  </ParameterBlock>
+                </when>
+              </choose>
+            </ChannelIndependentBlock>
           </Dynamic>
         </ApplicationProgram>
       </ApplicationPrograms>

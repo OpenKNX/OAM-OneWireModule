@@ -97,7 +97,7 @@
               <!-- OneWire channel independent settings -->
               <op:include href="WireGateway.share.xml" xpath="//Dynamic/Channel/*" prefix="LOG" />
               <!-- OneWire channel settings -->
-              <op:include href="WireGateway.templ.xml" xpath="//Dynamic/*" type="template" prefix="WIRE" />
+              <op:include href="WireGateway.templ.xml" xpath="//Dynamic/ChannelIndependentBlock/*" type="template" prefix="WIRE" />
             </Channel>
             <Channel Id="%AID%_CH-5" Name="Logik" Number="5" Text="Logik">
               <!-- Logic channel independent settings -->
