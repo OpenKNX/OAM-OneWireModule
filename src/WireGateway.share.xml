@@ -294,7 +294,7 @@
             </ParameterTypes>
             <Parameters>
               <Union SizeInBit="8">
-                <Memory CodeSegment="%AID%_RS-04-00000" Offset="45" BitOffset="0" />
+                <Memory CodeSegment="%AID%_RS-04-00000" Offset="0" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%T%000000" Name="WireError" Offset="0" BitOffset="0" ParameterType="%AID%_PT-OnOffYesNo" Text="Fehlerobjekt(e) anzeigen" Value="0" />
                 <Parameter Id="%AID%_UP-%T%000001" Name="BusMasterCount" Offset="0" BitOffset="1" ParameterType="%AID%_PT-BusMasterCount" Text="Installierte Busmaster" Value="1" />
                 <Parameter Id="%AID%_UP-%T%000002" Name="IdSearch" Offset="0" BitOffset="3" ParameterType="%AID%_PT-IdSearch" Text="Device-Suche" Value="1" />
@@ -311,7 +311,7 @@
               <Parameter Id="%AID%_P-%T%000016" Name="GroupText7" ParameterType="%AID%_PT-Text40Byte" Text="Gruppe 7: Name" Value="" />
               <Parameter Id="%AID%_P-%T%000017" Name="GroupText8" ParameterType="%AID%_PT-Text40Byte" Text="Gruppe 8: Name" Value="" />
               <Union SizeInBit="8">
-                <Memory CodeSegment="%AID%_RS-04-00000" Offset="46" BitOffset="0" />
+                <Memory CodeSegment="%AID%_RS-04-00000" Offset="1" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%T%000020" Name="Group1" Offset="0" BitOffset="0" ParameterType="%AID%_PT-GroupType" Text="                  Typ" Value="0" />
                 <Parameter Id="%AID%_UP-%T%000021" Name="Group2" Offset="0" BitOffset="1" ParameterType="%AID%_PT-GroupType" Text="                  Typ" Value="0" />
                 <Parameter Id="%AID%_UP-%T%000022" Name="Group3" Offset="0" BitOffset="2" ParameterType="%AID%_PT-GroupType" Text="                  Typ" Value="0" />
@@ -324,7 +324,7 @@
               <Parameter Id="%AID%_P-%T%000028" Name="DeviceCount" ParameterType="%AID%_PT-ValueDpt5" Text="Anzahl 1Wire-Geräte" Value="0" Access="Read" />
               <Parameter Id="%AID%_P-%T%000029" Name="BusmasterMax" ParameterType="%AID%_PT-ValueDpt5" Text="Maximale Anzahl Busmaster" Value="3" Access="None" />
               <Union SizeInBit="24">
-                <Memory CodeSegment="%AID%_RS-04-00000" Offset="47" BitOffset="0" />
+                <Memory CodeSegment="%AID%_RS-04-00000" Offset="2" BitOffset="0" />
                 <Parameter Id="%AID%_UP-%T%000030" Name="Busmaster1RSTL" Offset="0" BitOffset="0" ParameterType="%AID%_PT-BusMasterParameterRSTL" Text="tRSTL (in Mikrosekunden)" Value="6" />
                 <Parameter Id="%AID%_UP-%T%000031" Name="Busmaster1MSP"  Offset="0" BitOffset="4" ParameterType="%AID%_PT-BusMasterParameterMSP"  Text="tMSP (in Mikrosekunden)"  Value="6" />
                 <Parameter Id="%AID%_UP-%T%000032" Name="Busmaster1W0L"  Offset="1" BitOffset="0" ParameterType="%AID%_PT-BusMasterParameterW0L"  Text="tW0L (in Mikrosekunden)"  Value="6" />
