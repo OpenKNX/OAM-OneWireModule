@@ -53,6 +53,7 @@
             "args": [
                 "create",
                 "--Debug",
+                "--AbsoluteSingleParameters",
                 "WireGateway"
             ],
             "problemMatcher": [],
