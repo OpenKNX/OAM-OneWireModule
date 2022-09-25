@@ -1,30 +1,9 @@
 #pragma once
+#ifdef WIREMODULE
 #include "knx.h"
 #include "HardwareDevices.h"
 #include "Sensor.h"
 #include <OneWire.h>
-
-struct sSensorInfo
-{
-    float lastValue;
-    float lastSentValue;
-    uint32_t sendDelay;
-    uint32_t readDelay;
-};
-
-struct sActorInfo
-{
-    uint8_t lastOutputValue;
-    uint8_t lastInputValue;
-    uint32_t sendDelay;
-    uint32_t readDelay;
-};
-
-union uData
-{
-    sSensorInfo sensor;
-    sActorInfo actor;
-};
 
 class WireDevice
 {
@@ -79,3 +58,4 @@ class WireDevice
     // void setup(OneWire *iOneWire, uint8_t iModelFunction);
     void processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16_t iKoNumber);
 };
+#endif

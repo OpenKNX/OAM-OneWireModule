@@ -1,3 +1,4 @@
+#ifdef WIREMODULE
 #include "WireDevice.h"
 #include "knx.h"
 #include "IncludeManager.h"
@@ -501,7 +502,7 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
             // evaluate sending conditions (relative delta / absolute delta)
             if (mData.sensor.lastSentValue > 0.0)
             {
-                // currently we asume indoor measurement with values > 0.0
+                // currently we assume indoor measurement with values > 0.0
                 float lDelta = 100.0 - lValue / mData.sensor.lastSentValue * 100.0;
                 uint32_t lPercent = knx.paramByte(iParamIndex + WIRE_sSensorDeltaPercent);
                 if (lPercent && (uint32_t)abs(lDelta) >= lPercent)
@@ -540,3 +541,4 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
             mData.sensor.sendDelay = 1;
     }
 }
+#endif
