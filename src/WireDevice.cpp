@@ -1,7 +1,6 @@
 #ifdef WIREMODULE
 #include "WireDevice.h"
 #include "knx.h"
-#include "IncludeManager.h"
 #include "KnxHelper.h"
 #include "OneWireDS2482.h"
 
@@ -22,7 +21,7 @@ WireDevice::WireDevice()
 {
 }
 
-// desierilize device from ets parameters
+// deserialize device from ets parameters
 WireDevice::WireDevice(uint8_t iDeviceIndex, OneWireDS2482* iBusMaster[])
 {
     mDeviceIndex = iDeviceIndex; // device index in application
@@ -212,7 +211,7 @@ void WireDevice::processUnknownDevices()
 // static
 void WireDevice::processOneWire(bool iForce)
 {
-    // are threre any OW sensors
+    // are there any OW sensors
     if (sDeviceCount > 0)
     {
         if (iForce)
@@ -481,9 +480,9 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
         lSend = true;
 
     float lValue = 0;
-    ;
+
     // process read cycle
-    if (lSend || delayCheck(mData.sensor.readDelay, 5000))
+    if (lSend || delayCheck(mData.sensor.readDelay, 1000))
     {
         // we waited enough, let's read the sensor
         int32_t lOffset = knx.paramByte(iParamIndex + WIRE_sSensorOffset);

@@ -1,6 +1,8 @@
 #pragma once
 #ifdef WIREMODULE
 #include "knx.h"
+#include "knxprod.h"
+#include "hardware.h"
 #include "HardwareDevices.h"
 #include "Sensor.h"
 #include <OneWire.h>

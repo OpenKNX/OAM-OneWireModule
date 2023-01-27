@@ -5,6 +5,7 @@
 #include "OneWire.h"
 #include "WireDevice.h"
 #include <OneWireDS2482.h>
+#include "oknx.h"
 
 #include "IncludeManager.h"
 
@@ -217,6 +218,8 @@ void appSetup(bool iSaveSupported)
                 new WireDevice(lDeviceIndex, gBusMaster);
             }
         }
+        openknx.flashUserData()->readFlash();
+
     }
 }
 #endif
