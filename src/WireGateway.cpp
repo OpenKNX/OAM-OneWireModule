@@ -73,7 +73,7 @@ void ProcessReadRequests() {
     }
 }
 
-// true solgange der Start des gesamten Moduls verzögert werden soll
+// true solange der Start des gesamten Moduls verzögert werden soll
 bool startupDelay()
 {
     return !delayCheck(gStartupDelay, getDelayPattern(LOG_StartupDelayBase));
@@ -85,7 +85,7 @@ bool processDiagnoseCommand()
     bool lOutput = false;
     if (lBuffer[0] == 'v')
     {
-        // Command v: retrun fimware version, do not forward this to logic,
+        // Command v: return firmware version, do not forward this to logic,
         // because it means firmware version of the outermost module
         uint16_t lFirmwareVersion = knx.bau().deviceObject().version();
         sprintf(lBuffer, "VER [%d] %d.%d", lFirmwareVersion >> 11, (lFirmwareVersion >> 6) & 0x1F, lFirmwareVersion & 0x3F);
@@ -127,7 +127,7 @@ void ProcessKoCallback(GroupObject &iKo)
     else
     {
         WireDevice::processKOCallback(iKo);
-        // else dispatch to logicmodule
+        // else dispatch to logic module
         gLogic.processInputKo(iKo);
     }
 }

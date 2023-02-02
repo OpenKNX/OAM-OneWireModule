@@ -90,7 +90,7 @@ void WireDevice::processIButtonGroups()
     // group processing would be a loop over max 90 devices
     // times 8 Groups and the according logical operations
     // this would block too long!
-    // Here we implement an asynchroneous algorithm
+    // Here we implement an asynchronous algorithm
     // as described in doc/iButton-Group-Handling.txt
     // so we iterate per device just through all 8 groups
     // final group result takes at max 90 iterations
@@ -251,7 +251,7 @@ bool WireDevice::processNewIdCallback(OneWire *iOneWire)
         // new sensor found, we add it to unknown device list
         sDevice[sUnknownDeviceLast] = new WireDevice();
         sDevice[sUnknownDeviceLast++]->mOneWire = iOneWire;
-        // triger send new sensor info
+        // trigger send new sensor info
         sUnknownDeviceDelay = millis() - 58000; // start output in 2 seconds
     }
     return lResult;
@@ -404,7 +404,7 @@ void WireDevice::processOneWire() {
             case MODEL_DS1990:
                 lLastSent = (mData.sensor.lastSentValue != 0);
                 lNewState = (mOneWire->Mode() == OneWire::Connected);
-                // we just send initially on the bus if requested in ETS appllication
+                // we just send initially on the bus if requested in ETS application
                 if (mOneWire->Mode() != OneWire::New)
                 {
                     if (lLastSent != lNewState || lIsInitial)
@@ -443,7 +443,7 @@ void WireDevice::processOneWire() {
 }
 
 // read request on startup is currently not supported, because the KO (having an L-Flag) answers himself
-// the processing itself works, but there is currently no known way to prevent replys on such a read
+// the processing itself works, but there is currently no known way to prevent replays on such a read
 bool WireDevice::processReadRequest() {
     bool lResult = false;
     if (isIO()) {
@@ -467,7 +467,7 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
     bool lForce = mData.sensor.sendDelay == 0;
     bool lSend = lForce;
     float lValueFactor = 1.0;
-    // value factor depends on model funtion
+    // value factor depends on model function
     uint8_t lModelFunction = getModelFunction();
     if (lModelFunction >= ModelFunction_RawVDD && lModelFunction <= ModelFunction_RawVSens) {
         lValueFactor = 1000.0;
@@ -518,9 +518,6 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
             } else {
                 lSend = false;
             }
-            // wenn in KONNEKTING möglich, sollte der Wert im KO gespeichert werden, ohne dass
-            // er gesendet wird, damit ein GroupValueRead zwischendurch auch den korrekten Wert liefert
-            // hier lValue ins KO schreiben, KO-Nummer steht in iKoNumber
         }
         else
         {
@@ -530,8 +527,6 @@ void WireDevice::processSensor(float iOffsetFactor, uint16_t iParamIndex, uint16
     }
     if (lSend)
     {
-        // wenn in KONNEKTING möglich, dann den letzten ins KO geschriebenen Wert jetzt senden lassen
-        // sonst einfach lValue ueber das KO senden lassen, KO-Nummer steht in iKoNumber
         printDebug("KO%d sendet Wert: %f\n", iKoNumber, lValue);
         knx.getGroupObject(iKoNumber).objectWritten();
         mData.sensor.lastSentValue = (float)knx.getGroupObject(iKoNumber).value(getDPT(VAL_DPT_9));

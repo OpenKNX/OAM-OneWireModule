@@ -12,7 +12,7 @@ class WireDevice
   private:
     static uint8_t sDeviceCount; // max. device index to process during runtime
     static uint8_t sDeviceIndex; // iterator for global device processing
-    static WireDevice *sDevice[COUNT_1WIRE_CHANNEL]; // list of all used devices accross all BM
+    static WireDevice *sDevice[COUNT_1WIRE_CHANNEL]; // list of all used devices across all BM
 
     // unknown device processing
     // static uint8_t sUnknownDeviceFirst;
