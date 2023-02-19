@@ -14,9 +14,24 @@ Der letzte Punkt ist in der Applikationsbeschreibung [LogicModule](https://githu
 
 ## **Änderungshistorie**
 
-03.05.2022: Firmware 0.8
+18.02.2023: Firmware 1.0, Applikation 1.0
+
+* Anpassungen, damit das OneWireModule auch mit dem RP2040 benutzt werden kann
+* NEU: Das KO 'IDs unbekannter Geräte' wird nicht mehr ausgeschaltet, wenn die Geräteerkennung bei 1-Wire abgeschaltet wird.
+* Aktualisierung des Logikmoduls auf die neuste Version 1.4.2.
+
+09.01.2023: Firmware 0.8 (Beta)
 
 * Initiales OpenKNX Release
+* Basiert auf dem [Vorgänger-WireGateway](https://github.com/mumpf/knx-wire) version 3.8 (im folgenden stehen die Neuerungen gegenüber 3.8)
+* Erzeugung von Firmware und knxprod wurde stark vereinfacht
+* (intern) verbesserte Kommunikation mit dem KNX-Bus
+* ETS-Applikation wird auch mit der ETS 6 getestet
+* Eingänge können jetzt auch beliebige Kommunikationsobjekte der gesamten Applikation (nicht nur des Logikmoduls) sein, keine Verbindung über GA nötig
+* Die ETS-Applikation wurde optisch überarbeitet und übersichtlicher gestaltet
+* ETS-Kanäle werden neu unterstützt
+* Es wird technisch überprüft, ob die ETS-Applikation mit der installierten Firmware übereinstimmt
+* **Wichtig:** Diese Version ist eine komplett neue Applikation und somit nicht kompatibel zu der früheren Version 3.8. Die ETS-Applikation muss komplett neu parametrisiert werden.
 
 <div style="page-break-after: always;"></div>
 

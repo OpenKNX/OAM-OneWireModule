@@ -458,9 +458,9 @@
                 </choose>
                 <ParameterSeparator Id="%AID%_PS-11" Text="Gerätesuche" UIHint="Headline" />
                 <ParameterRefRef RefId="%AID%_UP-%T%000002_R-%T%00000201" />
+                <ComObjectRefRef RefId="%AID%_O-%T%000020_R-%T%00002001" />
                 <choose ParamRefId="%AID%_UP-%T%000002_R-%T%00000201">
                   <when test="1">
-                    <ComObjectRefRef RefId="%AID%_O-%T%000020_R-%T%00002001" />
                     <ParameterSeparator Id="%AID%_PS-16" Text="Im Produktivbetrieb sollte die Gerätesuche immer aus sein, da sie bei hoher KNX-Buslast dazu führen kann, dass Telegramme verloren gehen. Dieser Paremter sollte nur an sein, wenn man neue 1-Wire-Geräte anschließen will." UIHint="Information" />
                   </when>
                 </choose>
