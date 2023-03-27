@@ -170,9 +170,9 @@
               </ParameterType>
               <ParameterType Id="%AID%_PT-BusMasterCount" Name="BusMasterCount">
                 <TypeRestriction Base="Value" SizeInBit="2">
-                  <Enumeration Text="1 Busmaster (links)"              Value="1" Id="%AID%_PT-BusMaster_EN-0" />
-                  <Enumeration Text="2 Busmaster (links+rechts)"       Value="2" Id="%AID%_PT-BusMaster_EN-1" />
-                  <Enumeration Text="3 Busmaster (links+rechts+unten)" Value="3" Id="%AID%_PT-BusMaster_EN-2" />
+                  <Enumeration Text="1 Busmaster (links)"              Value="1" Id="%AID%_PT-BusMasterCount_EN-0" />
+                  <Enumeration Text="2 Busmaster (links+rechts)"       Value="2" Id="%AID%_PT-BusMasterCount_EN-1" />
+                  <Enumeration Text="3 Busmaster (links+rechts+unten)" Value="3" Id="%AID%_PT-BusMasterCount_EN-2" />
                 </TypeRestriction>
               </ParameterType>
               <ParameterType Id="%AID%_PT-BusMasterSelect1" Name="BusMasterSelect1">
